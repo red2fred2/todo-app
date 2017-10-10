@@ -1,0 +1,14 @@
+{
+  "name": "todo-app",
+  "version": "0",
+  "license": "MPL 2.0",
+  "description": "A simple todo list app.",
+  "dependencies": {
+    "child-process": "^1.0.2",
+    "express": "^4.16.1",
+    "gulp": "^3.9.1",
+    "gulp-ejs": "^3.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-using": "^0.1.1"
+  }
+}
