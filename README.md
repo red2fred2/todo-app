@@ -1,5 +1,6 @@
 # todo-app
 A simple todo app to help me improve my programming.
+
 *AND* to do what all the cool kids are doing.
 ---
 - Nginx
