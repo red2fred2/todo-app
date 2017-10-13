@@ -1,7 +1,7 @@
 const express = require('express'),
       app = express()
 
-app.all('*', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile('/home/xen/dynamic/todo/rendered/daily.html')
 })
 
