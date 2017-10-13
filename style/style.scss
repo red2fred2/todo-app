@@ -1,4 +1,2 @@
-$text-color: #b22;
-body {
-  color: $text-color;
-}
+@import "parts/variables";
+@import "parts/other";
