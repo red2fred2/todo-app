@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <%- include('templates/head.ejs', {
+  <%- include('templates/_head.ejs', {
     title: data.head.title
   }); %>
   <body>
-    hello
+    <%= data.body.text %>
   </body>
 </html>

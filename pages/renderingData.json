@@ -1,5 +1,8 @@
 {
-  "head":{
-    "title":"titulo"
+  "head": {
+    "title":"title"
+  },
+  "body": {
+    "text": "text"
   }
 }

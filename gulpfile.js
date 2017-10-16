@@ -18,7 +18,7 @@ gulp.task('clean', function() {
 
 //ejs
 gulp.task('ejs', ['clean'], function() {
-  gulp.src('./pages/daily.ejs')
+  gulp.src('./pages/*.ejs')
   .pipe(
     ejs({data:renderingData})
   )
@@ -67,7 +67,7 @@ gulp.task('babel', ['scss'], function() {
 
 //inline
 gulp.task('inline', ['babel'], function() {
-	gulp.src('./rendered/daily.html')
+	gulp.src('./rendered/*.html')
 	.pipe(
 	  wait(200)
 	)
