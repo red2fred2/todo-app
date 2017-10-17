@@ -9,6 +9,7 @@ const gulp          = require('gulp'),
       babel         = require('gulp-babel'),
 	    wait          = require('gulp-wait'),
       uglify        = require('gulp-uglify'),
+			jsx           = require('gulp-jsx'),
       renderingData = require('./pages/renderingData.json')
 
 //clean build folder
@@ -51,8 +52,30 @@ gulp.task('scss', ['ejs'], function() {
   )
 })
 
+//jsx
+gulp.task('jsx', ['scss'], function() {
+	gulp.src('./scripts/*.jsx')
+	.pipe(
+	  jsx({factory: 'React.createClass'})
+	)
+	.pipe(
+    babel()
+	)
+	//.pipe(
+  //  uglify()
+	//)
+	.pipe(
+    rename(function(path) {
+      path.extname = '.js'
+    })
+  )
+	.pipe(
+	  gulp.dest('./rendered')
+	)
+})
+
 //babel
-gulp.task('babel', ['scss'], function() {
+gulp.task('babel', ['jsx'], function() {
 	gulp.src('./scripts/*.js')
 	.pipe(
     babel()
