@@ -6,7 +6,6 @@ const gulp          = require('gulp'),
       cssmin        = require('gulp-cssmin'),
       htmlmin       = require('gulp-htmlmin'),
       inline        = require('gulp-inline'),
-      babel         = require('gulp-babel'),
 	    wait          = require('gulp-wait'),
       uglify        = require('gulp-uglify'),
 			jsx           = require('gulp-jsx'),
@@ -52,14 +51,11 @@ gulp.task('scss', ['ejs'], function() {
   )
 })
 
-//jsx
+/*//jsx
 gulp.task('jsx', ['scss'], function() {
 	gulp.src('./scripts/*.jsx')
 	.pipe(
 	  jsx({factory: 'React.createClass'})
-	)
-	.pipe(
-    babel()
 	)
 	//.pipe(
   //  uglify()
@@ -78,15 +74,12 @@ gulp.task('jsx', ['scss'], function() {
 gulp.task('babel', ['jsx'], function() {
 	gulp.src('./scripts/*.js')
 	.pipe(
-    babel()
-	)
-	.pipe(
     uglify()
 	)
 	.pipe(
 	  gulp.dest('./rendered')
 	)
-})
+})*/
 
 //inline
 gulp.task('inline', ['babel'], function() {
